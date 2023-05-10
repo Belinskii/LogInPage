@@ -60,7 +60,7 @@ final class MainViewController: UIViewController {
     }
 }
 
-// MARK - UIAlertController
+// MARK - UIAlertCntroller
 
 extension MainViewController {
     private func showAlert(withTitle title: String, andMessage message: String) {
