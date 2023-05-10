@@ -17,11 +17,12 @@ final class LogInViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         hiLabel.text = "\u{1F44B}"
-        welcomeLabel.text = "Welcome, " + welcome + "!"
+        welcomeLabel.text = "Welcome, \(String(welcome)) !"
     }
     
     @IBAction func logOutButtonTapped() {
         dismiss(animated: true)
-        
     }
+    
+    
 }

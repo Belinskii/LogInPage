@@ -9,6 +9,8 @@ import UIKit
 
 final class MainViewController: UIViewController {
     
+    //MARK: - IBOutlets
+    
     @IBOutlet var userNameTF: UITextField!
     @IBOutlet var passwordTF: UITextField!
     
@@ -34,6 +36,8 @@ final class MainViewController: UIViewController {
         view.endEditing(true)
     }
     
+    //MARK: - IBActions
+    
     @IBAction func logInButtonTapped() {
         if userNameTF.text == "User" && passwordTF.text == "Password" {
         } else {
@@ -48,6 +52,11 @@ final class MainViewController: UIViewController {
     
     @IBAction func forgotPassButtonTapped() {
         showAlert(withTitle: "Oops!", andMessage: "Your password is Password \u{1F609}")
+    }
+    
+    @IBAction func unwind(for segue: UIStoryboardSegue) {
+        userNameTF.text = ""
+        passwordTF.text = ""
     }
 }
 
