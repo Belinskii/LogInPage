@@ -15,6 +15,10 @@
 		25A8DAB52A0A50D700992FAC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25A8DAB32A0A50D700992FAC /* LaunchScreen.storyboard */; };
 		25A8DABD2A0A6BF400992FAC /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A8DABC2A0A6BF400992FAC /* WelcomeViewController.swift */; };
 		25A8DB0C2A0FE65B00992FAC /* Extension + UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A8DB0B2A0FE65A00992FAC /* Extension + UIView.swift */; };
+		25A8DB122A10D78C00992FAC /* Personal data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A8DB112A10D78C00992FAC /* Personal data.swift */; };
+		25A8DB152A10DB6100992FAC /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A8DB142A10DB6100992FAC /* TabBarViewController.swift */; };
+		25A8DB172A10E06B00992FAC /* UserDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A8DB162A10E06B00992FAC /* UserDataViewController.swift */; };
+		25A8DB192A10E4A900992FAC /* UserBioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A8DB182A10E4A900992FAC /* UserBioViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +32,10 @@
 		25A8DAB62A0A50D700992FAC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		25A8DABC2A0A6BF400992FAC /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		25A8DB0B2A0FE65A00992FAC /* Extension + UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension + UIView.swift"; sourceTree = "<group>"; };
+		25A8DB112A10D78C00992FAC /* Personal data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Personal data.swift"; sourceTree = "<group>"; };
+		25A8DB142A10DB6100992FAC /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TabBarViewController.swift; path = LogInPage/Storyboards/TabBarViewController.swift; sourceTree = SOURCE_ROOT; };
+		25A8DB162A10E06B00992FAC /* UserDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataViewController.swift; sourceTree = "<group>"; };
+		25A8DB182A10E4A900992FAC /* UserBioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserBioViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,7 +70,7 @@
 			children = (
 				25A8DB0D2A0FEC1A00992FAC /* App */,
 				25A8DB0E2A0FEC4500992FAC /* ViewControllers */,
-				25A8DB0B2A0FE65A00992FAC /* Extension + UIView.swift */,
+				25A8DB132A10D7B600992FAC /* Models */,
 				25A8DB0F2A0FEC7600992FAC /* Storyboards */,
 				25A8DB102A0FEC9700992FAC /* Resourses */,
 			);
@@ -84,6 +92,9 @@
 			children = (
 				25A8DAAC2A0A50D500992FAC /* LoginViewController.swift */,
 				25A8DABC2A0A6BF400992FAC /* WelcomeViewController.swift */,
+				25A8DB142A10DB6100992FAC /* TabBarViewController.swift */,
+				25A8DB162A10E06B00992FAC /* UserDataViewController.swift */,
+				25A8DB182A10E4A900992FAC /* UserBioViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -103,6 +114,15 @@
 				25A8DAB12A0A50D700992FAC /* Assets.xcassets */,
 			);
 			path = Resourses;
+			sourceTree = "<group>";
+		};
+		25A8DB132A10D7B600992FAC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				25A8DB112A10D78C00992FAC /* Personal data.swift */,
+				25A8DB0B2A0FE65A00992FAC /* Extension + UIView.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -177,9 +197,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				25A8DABD2A0A6BF400992FAC /* WelcomeViewController.swift in Sources */,
+				25A8DB172A10E06B00992FAC /* UserDataViewController.swift in Sources */,
 				25A8DB0C2A0FE65B00992FAC /* Extension + UIView.swift in Sources */,
 				25A8DAAD2A0A50D500992FAC /* LoginViewController.swift in Sources */,
 				25A8DAA92A0A50D500992FAC /* AppDelegate.swift in Sources */,
+				25A8DB152A10DB6100992FAC /* TabBarViewController.swift in Sources */,
+				25A8DB192A10E4A900992FAC /* UserBioViewController.swift in Sources */,
+				25A8DB122A10D78C00992FAC /* Personal data.swift in Sources */,
 				25A8DAAB2A0A50D500992FAC /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
