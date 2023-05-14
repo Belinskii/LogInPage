@@ -57,4 +57,4 @@ enum Person {
     }
 }
 
-let randy = User(login: "u", password: "p", person: .randy)
+let randy = User(login: "User", password: "Password", person: .randy)
