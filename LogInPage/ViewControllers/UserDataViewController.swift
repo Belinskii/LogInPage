@@ -19,14 +19,14 @@ class UserDataViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addVerticalGradientLayer(topColor: primaryColor, bottomColor: secondaryColor)
-        nameLabel.text = randyData["Имя"]
-        birthdayLabel.text = randyData["День рождения"]
-        ageLabel.text = randyData["Возраст"]
-        jobLabel.text = randyData["Профессия"]
-        familyStatusLabel.text = randyData["Семейное положение"]
-        kidsLabel.text = randyData["Дети"]
+        nameLabel.text = randy.person.name
+        birthdayLabel.text = randy.person.birthday
+        ageLabel.text = randy.person.age
+        jobLabel.text = randy.person.job
+        familyStatusLabel.text = randy.person.familyStatus
+        kidsLabel.text = randy.person.kids
         
-        title = randyData["Имя"]
+        title = randy.person.name
         
     }
 }

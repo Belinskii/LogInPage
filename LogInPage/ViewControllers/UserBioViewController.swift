@@ -14,7 +14,6 @@ class UserBioViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addVerticalGradientLayer(topColor: primaryColor, bottomColor: secondaryColor)
-        userBioLabel.text = randyBio
+        userBioLabel.text = randy.person.bio
     }
-
 }

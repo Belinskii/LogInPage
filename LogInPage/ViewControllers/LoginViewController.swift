@@ -23,7 +23,7 @@ final class LoginViewController: UIViewController {
     }
     
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
-        guard userNameTF.text == user, passwordTF.text == password else {
+        guard userNameTF.text == randy.login, passwordTF.text == randy.password else {
             showAlert(
                 withTitle: "Invalid login or password",
                 andMessage: "Please, enter correct login and password",
@@ -43,8 +43,8 @@ final class LoginViewController: UIViewController {
     
     @IBAction func forgotRegisterData(_ sender: UIButton) {
         sender.tag == 0
-        ? showAlert(withTitle: "Oops!", andMessage: "Your name is \(user) 😉")
-        : showAlert(withTitle: "Oops!", andMessage: "Your password is \(password) 😉")
+        ? showAlert(withTitle: "Oops!", andMessage: "Your name is \(randy.login) 😉")
+        : showAlert(withTitle: "Oops!", andMessage: "Your password is \(randy.password) 😉")
     }
     
     @IBAction func unwind(for segue: UIStoryboardSegue) {
