@@ -8,12 +8,13 @@
 import UIKit
 
 class UserBioViewController: UIViewController {
-
-    @IBOutlet var userBioLabel: UILabel!
+    @IBOutlet var bioTextView: UITextView!
+    
+var user: User!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.addVerticalGradientLayer(topColor: primaryColor, bottomColor: secondaryColor)
-        userBioLabel.text = randy.person.bio
+        view.addVerticalGradientLayer()
+        bioTextView.text = user.person.bio
     }
 }

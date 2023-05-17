@@ -8,53 +8,44 @@
 import Foundation
 
 struct User {
+    let id = UUID()
     let login: String
     let password: String
     let person: Person
+    
+    static func getUser() -> User {
+        User(login: "u", password: "p", person: Person.getPerson())
+    }
 }
 
-enum Person {
-    case randy
+struct Person {
+    let name: String
+    let surname: String
+    let photo: String
+    let birthday: String
+    let age: String
+    let job: String
+    let familyStatus: String
+    let kids: String
+    let bio: String
     
-    var name: String {
-        switch self {
-            case .randy: return "Рэнди Марш"
-        }
+    var fullname: String {
+        "\(name) \(surname)"
     }
-    var birthday: String {
-        switch self {
-            case .randy: return "1 марта"
-        }
-    }
-    var age: String {
-        switch self {
-            case .randy: return "Нет данных"
-        }
-    }
-    var job: String {
-        switch self {
-            case .randy: return "В настоящее время фермер, в прошлом - геолог"
-        }
-    }
-    var familyStatus: String {
-        switch self {
-            case .randy: return "Женат на Шерон Марш"
-        }
-    }
-    var kids: String {
-        switch self {
-            case .randy: return "Сын Стэн и дочь Шелли"
-        }
-    }
-    var bio: String {
-        switch self {
-            case .randy: return """
+        
+        static func getPerson() -> Person {
+            Person(name: "Рэнди",
+                   surname: "Марш",
+                   photo: "randy",
+                   birthday: "1 марта",
+                   age: "Нет данных",
+                   job: "В настоящее время фермер, в прошлом - геолог",
+                   familyStatus: "Женат на Шерон Марш",
+                   kids: "Сын Стэн и дочь Шелли",
+                   bio: """
                 Рэнди - единственный ученый в Саус-Парке, он является обладателем Нобелевской премии.
                 В юности Рэнди был участником популярной мальчиковой группы, ради которой он бросил город и школу. Позже, когда группа распалась, он вернулся в Саус-Парк, где ему пришлось терпеть унижения жителей города.
                 Несмотря на свою ученую степень, Рэнди, пожалуй, самый инфантильный из взрослых персонажей и во многом напоминает подростка. Также он легко поддается влиянию СМИ и частенько совершает невероятно глупые поступки, демонстрируя при этом порядочное тупоумие.
-           """
+           """)
         }
     }
-}
-
-let randy = User(login: "User", password: "Password", person: .randy)

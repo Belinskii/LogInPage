@@ -134,17 +134,17 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TQm-SV-UHd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="3Fq-XN-CpR" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1227" y="874"/>
+            <point key="canvasLocation" x="739" y="934"/>
         </scene>
         <!--User-->
         <scene sceneID="eaF-Uc-40I">
             <objects>
-                <viewController id="DE4-Fe-Ujc" customClass="UserDataViewController" customModule="LogInPage" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="DE4-Fe-Ujc" customClass="UserInfoViewController" customModule="LogInPage" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="i7P-Xm-Hl9">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="randy" translatesAutoresizingMaskIntoConstraints="NO" id="XPJ-7t-sMF">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XPJ-7t-sMF">
                                 <rect key="frame" x="100" y="142.5" width="120" height="120"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="XPJ-7t-sMF" secondAttribute="height" multiplier="1:1" id="qzJ-Sj-7ia"/>
@@ -291,11 +291,12 @@
                         <outlet property="jobLabel" destination="WsO-JG-37B" id="ktV-Rr-SfF"/>
                         <outlet property="kidsLabel" destination="E6M-EB-07Q" id="1u5-Hs-Qtq"/>
                         <outlet property="nameLabel" destination="z8P-t5-byt" id="wf1-l5-EfT"/>
+                        <outlet property="photoImage" destination="XPJ-7t-sMF" id="e50-TK-LQ5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YBI-gW-gtL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3092.3664122137402" y="873.94366197183103"/>
+            <point key="canvasLocation" x="2663" y="934"/>
         </scene>
         <!--Биография-->
         <scene sceneID="9oQ-hF-hp6">
@@ -305,39 +306,40 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bio text" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KGI-5b-iK5">
-                                <rect key="frame" x="16" y="274" width="288" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Text view" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="vTo-Bk-UOw">
+                                <rect key="frame" x="16" y="112.5" width="288" height="343"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="iMm-oF-yAt"/>
                         <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
                         <constraints>
-                            <constraint firstItem="iMm-oF-yAt" firstAttribute="trailing" secondItem="KGI-5b-iK5" secondAttribute="trailing" constant="16" id="7Em-hQ-TtI"/>
-                            <constraint firstItem="KGI-5b-iK5" firstAttribute="top" relation="greaterThanOrEqual" secondItem="iMm-oF-yAt" secondAttribute="top" constant="20" id="aqP-R0-J6Y"/>
-                            <constraint firstItem="KGI-5b-iK5" firstAttribute="centerY" secondItem="pLr-zN-VmI" secondAttribute="centerY" id="s47-lf-jwv"/>
-                            <constraint firstItem="KGI-5b-iK5" firstAttribute="leading" secondItem="iMm-oF-yAt" secondAttribute="leading" constant="16" id="vOp-d4-KuE"/>
+                            <constraint firstItem="vTo-Bk-UOw" firstAttribute="leading" secondItem="iMm-oF-yAt" secondAttribute="leading" constant="16" id="Kkm-gX-dQf"/>
+                            <constraint firstItem="vTo-Bk-UOw" firstAttribute="top" secondItem="iMm-oF-yAt" secondAttribute="top" constant="20" id="iwf-iX-i6y"/>
+                            <constraint firstItem="iMm-oF-yAt" firstAttribute="trailing" secondItem="vTo-Bk-UOw" secondAttribute="trailing" constant="16" id="j7l-Na-sig"/>
+                            <constraint firstItem="vTo-Bk-UOw" firstAttribute="centerY" secondItem="pLr-zN-VmI" secondAttribute="centerY" id="lzW-vb-mWc"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Биография" id="RPv-qg-q08">
                         <barButtonItem key="backBarButtonItem" title="В профиль" id="Rbb-CH-Fsh"/>
                     </navigationItem>
                     <connections>
-                        <outlet property="userBioLabel" destination="KGI-5b-iK5" id="yOB-E8-rlL"/>
+                        <outlet property="bioTextView" destination="vTo-Bk-UOw" id="3YM-3l-7Ds"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FB8-LO-hhc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3896" y="874"/>
+            <point key="canvasLocation" x="3497" y="934"/>
         </scene>
-        <!--Tab Bar View Controller-->
+        <!--Tab Bar Controller-->
         <scene sceneID="Hl0-j3-JOg">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="Ves-aZ-InW" customClass="TabBarViewController" customModule="LogInPage" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="Ves-aZ-InW" customClass="TabBarController" customModule="LogInPage" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="SKt-ww-Ton">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -370,12 +372,11 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="djc-aG-6lQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2165.6488549618321" y="873.94366197183103"/>
+            <point key="canvasLocation" x="1815" y="934"/>
         </scene>
     </scenes>
     <resources>
         <image name="person.fill" catalog="system" width="128" height="120"/>
-        <image name="randy" width="1132" height="1132"/>
         <systemColor name="opaqueSeparatorColor">
             <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
